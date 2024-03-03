@@ -1,6 +1,6 @@
 # authservice.DefaultApi
 
-All URIs are relative to *http://localhost:3000/auth*
+All URIs are relative to *https://auth-service-latest.onrender.com/auth*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,10 +26,10 @@ from authservice.models.client_get200_response import ClientGet200Response
 from authservice.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:3000/auth
+# Defining the host is optional and defaults to https://auth-service-latest.onrender.com/auth
 # See configuration.py for a list of all supported configuration parameters.
 configuration = authservice.Configuration(
-    host = "http://localhost:3000/auth"
+    host = "https://auth-service-latest.onrender.com/auth"
 )
 
 
@@ -98,10 +98,10 @@ from authservice.models.login_client_post200_response import LoginClientPost200R
 from authservice.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:3000/auth
+# Defining the host is optional and defaults to https://auth-service-latest.onrender.com/auth
 # See configuration.py for a list of all supported configuration parameters.
 configuration = authservice.Configuration(
-    host = "http://localhost:3000/auth"
+    host = "https://auth-service-latest.onrender.com/auth"
 )
 
 
@@ -170,10 +170,10 @@ from authservice.models.regenerate_client_credentials_post200_response import Re
 from authservice.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:3000/auth
+# Defining the host is optional and defaults to https://auth-service-latest.onrender.com/auth
 # See configuration.py for a list of all supported configuration parameters.
 configuration = authservice.Configuration(
-    host = "http://localhost:3000/auth"
+    host = "https://auth-service-latest.onrender.com/auth"
 )
 
 
@@ -242,10 +242,10 @@ from authservice.models.register_post201_response import RegisterPost201Response
 from authservice.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:3000/auth
+# Defining the host is optional and defaults to https://auth-service-latest.onrender.com/auth
 # See configuration.py for a list of all supported configuration parameters.
 configuration = authservice.Configuration(
-    host = "http://localhost:3000/auth"
+    host = "https://auth-service-latest.onrender.com/auth"
 )
 
 

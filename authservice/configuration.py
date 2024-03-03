@@ -69,7 +69,7 @@ class Configuration:
                  ) -> None:
         """Constructor
         """
-        self._base_path = "http://localhost:3000/auth" if host is None else host
+        self._base_path = "https://auth-service-latest.onrender.com/auth" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -380,7 +380,7 @@ class Configuration:
         """
         return [
             {
-                'url': "http://localhost:3000/auth",
+                'url': "https://auth-service-latest.onrender.com/auth",
                 'description': "No description provided",
             }
         ]
