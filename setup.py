@@ -63,7 +63,7 @@ Designed to simplify the authentication process, this Python SDK offers develope
 Featuring clear documentation and easy-to-use features, this SDK accelerates the development process by providing developers with the necessary tools to implement secure authentication mechanisms efficiently. Whether you're building web applications, mobile apps, or other Python-based projects, this SDK ensures smooth authentication workflows without unnecessary complexity.
 
 By leveraging this SDK, Python developers can streamline the integration of authentication functionalities, enabling them to focus on building innovative features and delivering exceptional user experiences. With its robust capabilities and flexible architecture, this SDK serves as a valuable resource for developers looking to enhance the authentication process in their Python projects.
-"""
+""",
 
   # noqa: E501
     package_data={"authservice": ["py.typed"]},
