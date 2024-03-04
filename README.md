@@ -54,10 +54,10 @@ import authservice
 from authservice.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:3000/auth
+# Defining the host is optional and defaults to https://auth-service-latest.onrender.com/auth
 # See configuration.py for a list of all supported configuration parameters.
 configuration = authservice.Configuration(
-    host = "http://localhost:3000/auth"
+    host = "https://auth-service-latest.onrender.com/auth"
 )
 
 
@@ -81,7 +81,7 @@ with authservice.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:3000/auth*
+All URIs are relative to *https://auth-service-latest.onrender.com/auth*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
