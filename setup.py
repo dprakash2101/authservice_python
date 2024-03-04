@@ -13,8 +13,7 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
-with open('README.md', 'r') as f:
-    DESCRIPTION = f.read()
+
 
 # To install the library, run the following
 #
@@ -22,8 +21,10 @@ with open('README.md', 'r') as f:
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
+with open('README.md', 'r') as f:
+    DESCRIPTION = f.read()
 NAME = "authservice"
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
@@ -57,13 +58,8 @@ setup(
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
     long_description_content_type='text/markdown',
-    long_description = """
-Designed to simplify the authentication process, this Python SDK offers developers a comprehensive solution for integrating the Auth API seamlessly into their Python applications. With a focus on usability and reliability, this SDK provides intuitive methods for user registration, login, and client credential management, empowering developers to enhance the security and user experience of their applications.
+    long_description=DESCRIPTION,
 
-Featuring clear documentation and easy-to-use features, this SDK accelerates the development process by providing developers with the necessary tools to implement secure authentication mechanisms efficiently. Whether you're building web applications, mobile apps, or other Python-based projects, this SDK ensures smooth authentication workflows without unnecessary complexity.
-
-By leveraging this SDK, Python developers can streamline the integration of authentication functionalities, enabling them to focus on building innovative features and delivering exceptional user experiences. With its robust capabilities and flexible architecture, this SDK serves as a valuable resource for developers looking to enhance the authentication process in their Python projects.
-""",
 
   # noqa: E501
     package_data={"authservice": ["py.typed"]},
