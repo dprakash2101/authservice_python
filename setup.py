@@ -13,6 +13,8 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
+with open('README.md', 'r') as f:
+    DESCRIPTION = f.read()
 
 # To install the library, run the following
 #
@@ -21,7 +23,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "authservice"
-VERSION = "1.0.0"
+VERSION = "0.0.1"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
@@ -29,21 +31,46 @@ REQUIRES = [
     "pydantic >= 2",
     "typing-extensions >= 4.7.1",
 ]
+CLASSIFIERS = [
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',  # Adjusted for developers interested in trying out the beta version
+]
+
 
 setup(
     name=NAME,
     version=VERSION,
-    description="Auth Service",
-    author="OpenAPI Generator community",
-    author_email="team@openapitools.org",
-    url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "Auth Service"],
+    description="With this SDK, Python developers can easily interact with the Auth API, enabling hassle-free implementation of user registration, login, and client credential management features within their applications.",
+    author="Code Crew24",
+    author_email="dprakash2101@gmail.com",
+    url="https://github.com/CodeCrew24/authservice_python",
+    keywords=["token based auth", "Bearer Token", "Auth Service"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
     long_description_content_type='text/markdown',
-    long_description="""\
-    This API provides token-based authentication for user registration, login, and client credential management. It ensures secure communication by utilizing tokens for authentication. Users can register with unique usernames and passwords, authenticate using client credentials, retrieve client IDs and secrets, and regenerate client credentials as needed. The API supports various user roles, including &#39;user&#39;, &#39;admin&#39;, &#39;moderator&#39;, &#39;guest&#39;, and &#39;superadmin&#39;.
-    """,  # noqa: E501
+    long_description = """
+Designed to simplify the authentication process, this Python SDK offers developers a comprehensive solution for integrating the Auth API seamlessly into their Python applications. With a focus on usability and reliability, this SDK provides intuitive methods for user registration, login, and client credential management, empowering developers to enhance the security and user experience of their applications.
+
+Featuring clear documentation and easy-to-use features, this SDK accelerates the development process by providing developers with the necessary tools to implement secure authentication mechanisms efficiently. Whether you're building web applications, mobile apps, or other Python-based projects, this SDK ensures smooth authentication workflows without unnecessary complexity.
+
+By leveraging this SDK, Python developers can streamline the integration of authentication functionalities, enabling them to focus on building innovative features and delivering exceptional user experiences. With its robust capabilities and flexible architecture, this SDK serves as a valuable resource for developers looking to enhance the authentication process in their Python projects.
+"""
+
+  # noqa: E501
     package_data={"authservice": ["py.typed"]},
+    license='MIT',
+    project_urls={
+        'GitHub Repo': 'https://github.com/CodeCrew24/authservice_python',
+        'Download': 'https://github.com/CodeCrew24/authservice_python/archive/1.0.0.tar.gz',
+        'Release Notes': 'https://github.com/CodeCrew24/authservice_python/releases/',
+    },
 )
