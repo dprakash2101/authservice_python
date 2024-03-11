@@ -40,6 +40,7 @@ from authservice.exceptions import (
 
 RequestSerialized = Tuple[str, str, Dict[str, str], Optional[str], List[str]]
 
+
 class ApiClient:
     """Generic API client for OpenAPI client library builds.
 
@@ -90,6 +91,51 @@ class ApiClient:
         self.user_agent = 'OpenAPI-Generator/1.0.0/python'
         self.client_side_validation = configuration.client_side_validation
 
+    def call_api(
+        self,
+        method,
+        url,
+        header_params=None,
+        body=None,
+        post_params=None,
+        _request_timeout=None
+    ) -> rest.RESTResponse:
+        """Makes the HTTP request (synchronous)
+        :param method: Method to call.
+        :param url: Path to method endpoint.
+        :param header_params: Header parameters to be
+            placed in the request header.
+        :param body: Request body.
+        :param post_params dict: Request post form parameters,
+            for `application/x-www-form-urlencoded`, `multipart/form-data`.
+        :param _request_timeout: timeout setting for this request.
+        :return: RESTResponse
+        """
+        try:
+            # Log information about the API call
+            logging.info("Making API call - Method: %s, URL: %s", method, url)
+            logging.debug("Headers: %s", header_params)
+            logging.debug("Body: %s", body)
+            logging.debug("Post Params: %s", post_params)
+
+            # perform request and return response
+            response_data = self.rest_client.request(
+                method, url,
+                headers=header_params,
+                body=body, post_params=post_params,
+                _request_timeout=_request_timeout
+            )
+
+            # Log information about the response
+            logging.info("Received API response - Status Code: %s", response_data.status)
+            logging.debug("Response Data: %s", response_data.data)
+
+        except ApiException as e:
+            # Log any exceptions that occur during the API call
+            logging.error("API call failed with exception: %s", e)
+            raise e
+
+        return response_data
     def __enter__(self):
         return self
 
