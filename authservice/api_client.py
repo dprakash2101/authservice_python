@@ -265,6 +265,8 @@ class ApiClient:
         """
         try:
             # Log method call
+            logging.info("Python SDK is beign used")
+
             logging.info("SDK method call - Method: %s, URL: %s", method, url)
 
             # perform request and return response
